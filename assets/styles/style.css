@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Ropa+Sans&display=swap');
 
-:root{ /*  SETAMOS AS CORES PADRÃO AQUI E USAMOS SOMENTE A VARIÁVEL NOS ELEMENTOS, ASISM SE PRECISAR MUDAR FAZEMOS UMA VEZ*/
+:root{ 
     --color-title: #00008B;
     --color-taskLine: #1C1C1C;
     --color-taskLineFinished: #696969;
@@ -29,6 +29,7 @@ body > h1 {
     color: var(--color-taskLine);
 }
 
-.taskListLine .taskListFinished {
+.taskListFinished {
     color: var(--color-taskLineFinished);
+    text-decoration: line-through;
 }
