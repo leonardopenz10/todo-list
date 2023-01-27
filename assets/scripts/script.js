@@ -1,14 +1,16 @@
-let newTask = 0
+let newTask = ""
 
 $("#addNewTask").click(() => {
 
     if($("#taskLine").val() != 0){
         newTask = $("#taskLine").val()
-        $("li").html('<li class="taskListLine">'+newTask+'</li>')
+        $("#taskList").prepend('<li class="taskListLine">'+newTask+'</li>')
         console.log(newTask)
+
+        $("#taskLine").val("")
     }else
     
-    console.log("campo não preenchido")
+    alert("Campo não preenchido! Gentileza preencha o campo de nova tarefa.")
 
 } )
 
