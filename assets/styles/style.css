@@ -50,6 +50,10 @@
 	background-color:#0061a7;
 }
 
+img{
+    max-width: 2.5vh;
+}
+
 .taskListLine{
 
 }
