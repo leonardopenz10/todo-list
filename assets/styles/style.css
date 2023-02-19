@@ -92,4 +92,25 @@ img{
 .taskListFinished {
     color: var(--color-taskLineFinished);
     text-decoration: line-through;
+    margin-bottom: 2vh;
 } 
+
+/*================ LAYOUT RESPONSIVO ===============*/
+
+/* @media screen and (min-width: 1200px) {
+    .container-tasks {
+        width: 100vw;
+        height: 75%;
+        border: 1px solid var(--color-taskLine);
+        margin-left: 15%;
+    }
+  } */
+
+/* @media screen and (max-width: 800px) {
+.container-tasks {
+    width: 100vw;
+    height: 75%;
+    border: 1px solid var(--color-taskLine);
+    margin-left: 15%;
+}
+} */
