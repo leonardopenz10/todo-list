@@ -14,7 +14,7 @@ $("#addNewTask").click(() => {
 
 } )
 
-$(".taskListLine").click(() => {
+$(".img1").click(() => {
     $("li").toogle("taskListFinished")
 })
 
