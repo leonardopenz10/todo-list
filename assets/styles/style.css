@@ -56,12 +56,9 @@ body {
 	background-color:#0061a7;
 }
 */
-.container-tasks{
-    width: 50vw;
-    height: 75%;
+.tasks{
     /* border: 1px solid var(--color-taskLine); */
     list-style-type: none;
-    margin-left: 40%;
     /* text-align: center; */
     /* float: center; */
 }
