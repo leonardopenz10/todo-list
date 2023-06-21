@@ -8,21 +8,34 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="icon" href="./assets/images/favicon.png" type="image/png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <title>ToDo List</title>
 </head>
 <body>
     
-    <div class="container">
-        <h1 class="">Minha lista</h1>
-        <input type="text" id="taskLine">
-        <button id="addNewTask" class="btn btn-primary">+</button>
+    <div class="container text-center">
+        <h1 class="fs-1 fw-bold">Minha lista</h1>
+        <div class="input-group mb-3">
+            <input type="text" id="taskLine" class="form-control" placeholder="Adicionar nova tarefa" aria-label="Adicionar nova tarefa" aria-describedby="button-addon2">
+            <button class="btn btn-primary" type="button" id="addNewTask">+</button>
+        </div>
+
     </div>
-    <div class="container">
-        <ul id="taskList">
-            <li class="taskListLine"><img src="./assets/images/no-check.png" class="img1">Nova Tarefa Adicionada <img src="./assets/images/cancel-task.png" class="img2"></li>
-            <li class="taskListLine"><img src="./assets/images/no-check.png" class="img1">Outra Tarefa Adicionada <img src="./assets/images/cancel-task.png" class="img2"> </li>
-            <li class="taskListLine taskListFinished"><img src="./assets/images/check.png" class="img1">Tarefa concluída </li>
-        </ul>
+    <div class="container text-start">
+        <ul id="taskList" class="list-group">
+            <li class="list-group-item">
+              <input class="form-check-input me-1" type="checkbox" value="" >
+              <label class="form-check-label">Nova Tarefa Adicionada</label>
+            </li>
+            <li class="list-group-item">
+              <input class="form-check-input me-1" type="checkbox" value="" >
+              <label class="form-check-label">Outra Tarefa Adicionada</label>
+            </li>
+            <li class="list-group-item">
+              <input class="form-check-input me-1" type="checkbox" value="true" >
+              <label class="form-check-label">Tarefa concluída</label>
+            </li>
+          </ul>
     </div>
     
 

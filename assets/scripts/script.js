@@ -1,20 +1,78 @@
 let newTask = ""
 
-$("#addNewTask").click(() => {
+$(document).ready(function() {
+    // Função para adicionar classe quando um checkbox é marcado
+    function addClassToChecked() {
+      $('input[type="checkbox"]').change(function() {
+        if ($(this).is(':checked')) {
+          $(this).siblings('label').addClass('taskListFinished');
+        } else {
+          $(this).siblings('label').removeClass('taskListFinished');
+        }
+      });
+    }
+  
+    // Chamada inicial da função para os checkboxes existentes
+    addClassToChecked();
+  
+    // Ao adicionar uma nova tarefa
+    $("#addNewTask").click(() => {
+      if ($("#taskLine").val() != "") {
+        var newTask = $("#taskLine").val();
+        $("#taskList").prepend('<li class="list-group-item"><input class="form-check-input me-1" type="checkbox" value=""><label class="form-check-label">' + newTask + '</label></li>');
+        console.log(newTask);
+        $("#taskLine").val("");
+  
+        // Chama a função novamente para os novos checkboxes
+        addClassToChecked();
+      } else {
+        alert("Campo não preenchido! Gentileza preencher o campo de nova tarefa.");
+      }
+    });
+  });
+  
 
-    if($("#taskLine").val() != 0){
-        newTask = $("#taskLine").val()
-        $("#taskList").prepend('<li class="taskListLine"> <img src="./assets/images/no-check.png">' +newTask+ '<img src="./assets/images/cancel-task.png"> </li>')
-        console.log(newTask)
 
-        $("#taskLine").val("")
-    }else
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// $("#addNewTask").click(() => {
+
+//     if($("#taskLine").val() != 0){
+//         newTask = $("#taskLine").val()
+//         $("#taskList").prepend('<li class="list-group-item"> <input class="form-check-input me-1" type="checkbox" value=""> <label class="form-check-label">' +newTask+ '</label> </li>')
+//         console.log(newTask)
+
+//         $("#taskLine").val("")
+//     }else
     
-    alert("Campo não preenchido! Gentileza preencha o campo de nova tarefa.")
+//     alert("Campo não preenchido! Gentileza preencha o campo de nova tarefa.")
 
-} )
+// } )
 
-$(".img1").click(() => {
-    $("li").toogle(".taskListFinished")
-})
+// $("#addNewTask").click(() => {
+//     $(document).ready()
+// })
 
+// $(document).ready(function() {
+//     // Quando um checkbox é marcado
+//     $('input[type="checkbox"]').change(function() {
+//       if ($(this).is(':checked')) {
+//         $(this).siblings('label').addClass('taskListFinished');
+//       } else {
+//         $(this).siblings('label').removeClass('taskListFinished');
+//       }
+//     });
+//   });

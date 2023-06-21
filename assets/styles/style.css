@@ -89,7 +89,7 @@ img{
 .taskListFinished {
     color: var(--color-taskLineFinished);
     text-decoration: line-through;
-    margin-bottom: 2vh;
+    /* margin-bottom: 2vh; */
 } 
 
 /*================ LAYOUT RESPONSIVO ===============*/
