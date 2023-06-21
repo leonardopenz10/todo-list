@@ -19,7 +19,7 @@ $(document).ready(function() {
     $("#addNewTask").click(() => {
       if ($("#taskLine").val() != "") {
         var newTask = $("#taskLine").val();
-        $("#taskList").prepend('<li class="list-group-item"><input class="form-check-input me-1" type="checkbox" value=""><label class="form-check-label">' + newTask + '</label></li>');
+        $("#taskList").prepend('<li class="list-group-item"><input class="form-check-input me-1" type="checkbox" value=""><label class="form-check-label">' + newTask + '</label> <button class="btn btn-danger btn-sm float-end">Excluir</button></li>');
         console.log(newTask);
         $("#taskLine").val("");
   
@@ -31,48 +31,3 @@ $(document).ready(function() {
     });
   });
   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// $("#addNewTask").click(() => {
-
-//     if($("#taskLine").val() != 0){
-//         newTask = $("#taskLine").val()
-//         $("#taskList").prepend('<li class="list-group-item"> <input class="form-check-input me-1" type="checkbox" value=""> <label class="form-check-label">' +newTask+ '</label> </li>')
-//         console.log(newTask)
-
-//         $("#taskLine").val("")
-//     }else
-    
-//     alert("Campo não preenchido! Gentileza preencha o campo de nova tarefa.")
-
-// } )
-
-// $("#addNewTask").click(() => {
-//     $(document).ready()
-// })
-
-// $(document).ready(function() {
-//     // Quando um checkbox é marcado
-//     $('input[type="checkbox"]').change(function() {
-//       if ($(this).is(':checked')) {
-//         $(this).siblings('label').addClass('taskListFinished');
-//       } else {
-//         $(this).siblings('label').removeClass('taskListFinished');
-//       }
-//     });
-//   });
