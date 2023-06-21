@@ -14,6 +14,11 @@ $(document).ready(function() {
   
     // Chamada inicial da função para os checkboxes existentes
     addClassToChecked();
+
+    // Evento de clique no botão "Excluir"
+    $('body').on('click', 'button.btn-danger', function() {
+        $(this).closest('li').remove();
+    });
   
     // Ao adicionar uma nova tarefa
     $("#addNewTask").click(() => {
@@ -30,4 +35,4 @@ $(document).ready(function() {
       }
     });
   });
-  
+
